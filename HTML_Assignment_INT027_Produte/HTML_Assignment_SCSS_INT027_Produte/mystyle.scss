@@ -1,0 +1,191 @@
+@mixin flex-properties($display,$flex-direction,$list-style) {
+	display: $display;
+	flex-direction: $flex-direction;
+	list-style: $list-style;
+}
+
+@mixin button-properties($bgcolor,$border,$color,$text-align,$text-decoration,$display,$font-size)
+{
+	background-color: $bgcolor;
+	border: $border;
+	color: $color;
+	text-align: $text-align;
+	text-decoration: $text-decoration;
+	display: $display;
+	font-size: $font-size;
+}
+
+.flex-row {
+	@include flex-properties(flex,row,none);
+}
+
+.flex-column {
+	@include flex-properties(flex,column,none);
+}
+
+.logo {
+	background: url("pic1.png") no-repeat;
+	width: 180px;
+	height: 120px;
+	display: block;
+	background-size: 100% 100%;
+	background-color: #ff0000;
+}
+
+.button-2 {
+	@include button-properties(#d9272d,none,#ffffff,center,none,inline-block,13px);
+	padding: 10px 42px;
+
+}
+
+.button {
+	@extend .button-2;
+	padding: 10px 19px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.li-padding {
+	padding-right: 60px;
+	padding-top: 20px;
+
+	&-right-lower-container{
+	  padding-right: 95px;
+	  padding-top: 20px;
+	  padding-bottom: 10px;
+
+	  &-first-item{
+	    padding-right: 95px;
+	    padding-top: 20px;
+	    padding-bottom: 10px;
+	    padding-left: 50px;
+       }
+     }
+   }
+
+   .upper-right{
+   	 &-div{
+	   background-color: #d6d6d6;
+	   font-family: tahoma;
+      }
+
+     &-container{
+	   text-decoration: none;
+	   font-family: tahoma;
+	   color: #000000;
+      }
+
+     &-simple-hyperlink{
+      padding-right: 40px;
+      padding-top: 20px;
+      }
+
+      &-simple-text{
+	   padding-right: 40px;
+	   padding-top: 20px;
+	   color: #d9272d;
+      }
+
+      &-search-box{
+	   padding-bottom: 15px;
+	   padding-right: 130px;
+
+	   &-margin
+        {
+	      margin-top: 20px;
+        }
+     }
+   }
+
+
+   .second-upper-right-div{
+	background-color: #ffffff;
+	padding-top: 20px;
+	font-family: tahoma;
+ }
+
+ .section {
+ 	&-div{
+	background-color: #d9272d;
+	color: #ffffff;
+	margin-left: 41px;
+	height: 50px;
+	padding: 20px;
+	font-family: tahoma;
+	margin-right: 25px;
+    }
+
+    &-text{
+	text-align: center;
+	vertical-align: center;
+	margin-top: 12px;
+    }
+ }
+
+ .footer {
+ 	&-div{
+	background-color: #57585b; 
+	color: #ffffff;
+	margin-left: 40px;
+	height: 450px;
+	margin-top: -16px;
+	margin-right: 25px;
+   }
+
+   &-logo
+   {  
+	margin-left: 72px;
+   }
+
+   &-ul{
+	list-style: none;
+      }
+
+      &-content-div{
+	display: flex; 
+	margin-left: 95px;
+    }
+
+    &-content-ul{
+	list-style: none; 
+	padding-right: 40px;
+    }
+
+    &-list-contents{
+	color: #7f7f7f;
+	text-decoration: none;
+	font-family: tahoma;
+    }
+
+    &-list-header{
+	color: #ffffff;
+	text-decoration: none;
+	font-family: tahoma;
+    }
+ }
+
+ .social-media-links {
+	background: url("social_media.png") no-repeat;
+	width: 130px;
+	height: 50px;
+	display: block;
+	background-size: 100% 100%;
+	background-color: #ff0000;
+	float: right;
+	margin-right: 50px;
+    }
+
+    .footnote {
+    	&-div{
+	margin-left: 95px;
+	text-align: center;
+    }
+
+    &-ul{
+	list-style: none;
+	color: #7f7f7f;
+	display: flex;
+	font-family: tahoma;
+	font-size: 15px;
+    }
+    }
